@@ -1,7 +1,7 @@
-export default function Home() {
+export default function Login() {
   return (
     <h1 className="text-3xl font-bold underline">
-      Home Page
+      Login Page
     </h1>
   )
 }
