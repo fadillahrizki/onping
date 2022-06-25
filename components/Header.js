@@ -2,7 +2,7 @@ import React from 'react';
 import { FaShoppingCart, FaBell, FaHistory, FaEnvelope, FaUserCircle, FaArrowAltCircleDown } from 'react-icons/fa';
 import Link from 'next/link';
 
-export default function Main(){
+export default function Header(){
     return(
         <header className='w-full border text-white bg-red-600 p-0'>
             <nav className='flex mt-2'>
@@ -19,7 +19,7 @@ export default function Main(){
                     <Link href='/'>ONP!NG</Link>
                 </h1>
                 <form className='mt-4'>   
-                    <input type="search" id="default-search" className="p-3 bg-zinc-200 w-[500px] rounded-lg" placeholder="Cari..." required />
+                    <input type="search" id="default-search" className="p-3 bg-zinc-200 w-[500px] rounded-lg text-black" placeholder="Cari..." required />
                 </form>
                 <div className='flex mt-6 gap-[70px] ml-20'>
                     {<FaShoppingCart size={30} />}
