@@ -2,7 +2,7 @@ import React from 'react';
 import { FaShoppingCart, FaBell, FaHistory, FaEnvelope, FaUserCircle, FaArrowAltCircleDown } from 'react-icons/fa';
 import Link from 'next/link';
 
-export default function Header(){
+export default function Main(){
     return(
         <header className='w-full border text-white bg-red-600 p-0'>
             <nav className='flex mt-2'>
