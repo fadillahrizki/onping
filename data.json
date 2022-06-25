@@ -36,6 +36,12 @@
         "description" : "8 GB RAM 128 GB ROM" 
     },
     {
+        "name" : "Xaomi 12 Pro",
+        "price": 6000000,
+        "image": "./UAS-Assets/Elektronik/Xiaomi-12-Pro.png",
+        "description" : "50 MP 128 GB ROM 8 GB RAM" 
+    },
+    {
         "name" : "T-Shirt Casual Premium",
         "price": 95000,
         "image": "./UAS-Assets/Fashion/Casual.jpg",
