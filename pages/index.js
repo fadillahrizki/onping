@@ -1,12 +1,14 @@
 import Layout from '../Layout/Layout'
 import Product from '../components/Product'
-import Item from '../public/data.json'
+import { Fragment } from 'react'
 
 export default function Home( {props} ) {
   return (
-    <Layout >
-        <Product posts = { props.posts }/>
-    </Layout>
+    <Fragment>
+      <Layout>
+        <Product />
+      </Layout>
+    </Fragment>
   )
 }
 
