@@ -1,6 +1,12 @@
+import Layout from '../Layout/Layout'
 import Product from '../components/Product'
-import Header from '../components/Header'
+import Item from '../public/data.json'
 
-export default function Home() {
-  return <Header />
+export default function Home( {props} ) {
+  return (
+    <Layout >
+        <Product posts = { props.posts }/>
+    </Layout>
+  )
 }
+
