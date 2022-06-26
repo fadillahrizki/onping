@@ -1,4 +1,4 @@
-[
+export default [
     {
         "name" : "Mi TV 4",
         "price": 15000000,

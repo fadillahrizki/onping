@@ -10,17 +10,17 @@ export default function Login() {
             <h1 className="text-[30px] font-semibold text-red-600">Log in</h1>
             <form className="grid grid-rows-2 ">
                 <div className="py-4">
-                    <input type="text" placeholder="Email/Username" className="placeholder-style border border-3 rounded-lg py-3 w-[450px]"/>
+                    <input type="text" placeholder="Email/Username" className="border border-3 rounded-lg p-3 w-[450px]"/>
                 </div>
                 <div className="py-4">
-                    <input type="text" placeholder="Password" className="placeholder-style border border-3 rounded-lg py-3 w-[450px]"/>
+                    <input type="text" placeholder="Password" className="border border-3 rounded-lg p-3 w-[450px]"/>
                 </div>
                 <button className="bg-red-600 p-2 rounded-lg text-white font-bold mt-5">Login</button>
             </form>
             <p className="text-sm text-blue-700 text-center mt-12">Lupa Password?</p>
         </div>
         <div className="border bg-white rounded-lg text-center p-5 mt-10">
-            <p>Belum Punya Akun? <span className="text-red-600 font-bold"><Link href='/'>Daftar Sekarang</Link></span></p>
+            <p>Belum Punya Akun? <span className="text-red-600 font-bold"><Link href='/register'>Daftar Sekarang</Link></span></p>
         </div>
         <div className="ml-14 mt-5 w-[450px]">
             <p className="text-white font-semibold text-center">Download Aplikasinya Sekarang!</p>

@@ -27,20 +27,20 @@ export default function Daftar() {
             </div>
             <form className="grid">
                 <div className="py-2">
-                    <input type="text" placeholder="Email/Username" className="placeholder-style border border-3 rounded-lg py-3 w-[480px]"/>
+                    <input type="text" placeholder="Email/Username" className="border border-3 rounded-lg p-3 w-[480px]"/>
                 </div>
                 <div className="py-2">
-                    <input type="text" placeholder="Password" className="placeholder-style border border-3 rounded-lg py-3 w-[480px]"/>
+                    <input type="text" placeholder="Password" className="border border-3 rounded-lg p-3 w-[480px]"/>
                 </div>
                 <div className="py-2">
-                    <input type="text" placeholder="Nama Pengguna" className="placeholder-style border border-3 rounded-lg py-3 w-[480px]"/>
+                    <input type="text" placeholder="Nama Pengguna" className="border border-3 rounded-lg p-3 w-[480px]"/>
                 </div>
                 <div className="py-2">
-                    <input type="text" placeholder="Kata Sandi" className="placeholder-style border border-3 rounded-lg py-3 w-[480px]"/>
+                    <input type="text" placeholder="Kata Sandi" className="border border-3 rounded-lg p-3 w-[480px]"/>
                 </div>
                 <button className="bg-red-600 p-2 rounded-lg text-white font-bold mt-5 w-[480px]">Login</button>
             </form>
-            <p className="text-center mt-8">Sudah Punya Akun? <span className="font-bold text-red-600"><Link href="/">Log In</Link></span></p>
+            <p className="text-center mt-8">Sudah Punya Akun? <span className="font-bold text-red-600"><Link href="/login">Log In</Link></span></p>
         </div>
     </div>
   )
