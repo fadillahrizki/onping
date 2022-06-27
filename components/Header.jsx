@@ -1,5 +1,6 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useState } from 'react';
 import { FaShoppingCart, FaBell, FaHistory, FaEnvelope, FaUserCircle, FaArrowAltCircleDown } from 'react-icons/fa';
+import {GoSearch} from 'react-icons/go'
 import Head from 'next/head'
 import Link from 'next/link';
 
@@ -27,12 +28,13 @@ export default function Header({title}){
                             <Link href='/'>ONP!NG</Link>
                         </h1>
                         <form className='mt-4'>   
-                            <input type="search" id="default-search" className="p-3 bg-zinc-200 w-[500px] rounded-lg text-black" placeholder="Cari..." required />
+                            <input type="search"  className="p-3 bg-zinc-200 w-[500px] rounded-lg text-black focus:outline-0" placeholder="Cari..." required />
+                            <span className='absolute ml-[-40px] mt-3 text-slate-500'>< GoSearch size={25} /></span>
                         </form>
                         <div className='flex mt-6 gap-[70px] ml-10'>
                             <FaShoppingCart size={30} />
                             <FaBell size={30} />
-                            <FaHistory size={30} />
+                            <Link href='/history'><span className='cursor-pointer'><FaHistory size={30} /></span></Link>
                             <FaEnvelope size={30} />
                             <span className='flex gap-[10px]'>
                                 <FaUserCircle size={30} />

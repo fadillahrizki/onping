@@ -2,6 +2,8 @@ import Layout from '../../Layout/Layout'
 import { Fragment, useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 import products from "../../public/products"
+import { IoPencilSharp } from "react-icons/io5"
+import { FiPlusSquare, FiMinusSquare } from 'react-icons/fi'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -16,7 +18,8 @@ export default function Detail() {
     
 
     return (
-        product ? <Fragment>
+        product ? 
+        <Fragment>
             <Layout title={product.name}>
                 <div className='w-full'>
                     <div className='mt-10 mx-72'>
@@ -31,7 +34,7 @@ export default function Detail() {
                             <div className='col-span-3'>
                                 <Image src={product.image} width={500} height={500}/>
                             </div>
-                            <div className='col-span-7'>
+                            <div className='col-span-6'>
                                 <h2 className='text-xl'>{product.name}</h2>
                                 <h1 className='text-2xl font-bold my-3'>Rp. {product.price}</h1>
                                 <div className='mt-10'>
@@ -39,8 +42,31 @@ export default function Detail() {
                                     <p className='text-sm'>{product.description}</p>
                                 </div>
                             </div>
-                            <div className='col-span-2'>
-                                buttons
+                            <div className='bg-red-600 flex-col h-10 w-[250px] h-[50px] p-3 rounded-lg '>
+                                <p className='text-white font-semibold'>Produk Terpopuler</p>
+                            </div>
+                            <div className='border-2 border-red-600 mt-20 ml-[-85px] w-[250px] p-2 rounded-xl'>
+                                <p className='font-bold'>Pilih Varian</p>
+                                <Image src={product.image} width={100} height={100} />
+                                <div className = 'border-t-2 border-t-slate-400 '>
+                                    <p className='text-sm my-2'>Jumlah Barang & Catatan</p>
+                                    <div className='grid grid-cols-2'>
+                                        < FiMinusSquare  size={30}/>
+                                        <span className='grid grid-cols-2'>< FiPlusSquare size={30}/><p>Stok 30</p></span>
+                                    </div> 
+                                    <div className='flex mt-5 gap-2'>
+                                        < IoPencilSharp size={20}/>
+                                        <p className='text-red-600 font-semibold'>Tambah Catatan</p>
+                                    </div>
+                                    <div className='mt-5 flex'>
+                                        <p className='text-sm font-semibold text-gray-400'>Total Belanja :</p>
+                                        <h1 className='text-lg font-bold my-4 ml-6'>Rp. {product.price}</h1>
+                                    </div>
+                                    <div className='grid gap-2 w-3/4 m-auto font-bold my-5'>
+                                        <button className='text-white bg-red-600 p-3 rounded-xl'>+ Masuk Troli</button>
+                                        <button className='border border-red-600 p-3 rounded-xl text-red-600'>Langsung Beli</button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
