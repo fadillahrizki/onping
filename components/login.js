@@ -1,6 +1,6 @@
 import Link from "next/link";
-import AppStore  from "../public/Appstore.svg";
-import Playstore from "../public/Playstore.svg";
+import AppStore  from "../public/SVG/Appstore.svg";
+import Playstore from "../public/SVG/Playstore.svg";
 import Image from "next/image";
 
 export default function Login() {

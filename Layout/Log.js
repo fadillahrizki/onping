@@ -1,4 +1,5 @@
 import { Fragment } from "react";
+import Link from 'next/link'
 import Head from 'next/head';
 import Image from 'next/image'
 import mikro from '../public/UAS-Assets/mikro.png'
@@ -23,8 +24,8 @@ export default function Log( {children, type }){
                         <p className="text-center">anonymous</p>
                         <p>dari Mikroskil University</p>
                     </div>
-                    <div className="ml-48">
-                        <Image src={mikro} width={600} height={230}/>
+                    <div className="ml-48 cursor-pointer">
+                        <Link href="https://www.mikroskil.ac.id"><Image src={mikro} width={600} height={230}/></Link>
                     </div>    
                 </div>
                 {children}

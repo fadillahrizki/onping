@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
-import Google from '../public/Google.svg'
-import Fb from "../public/Fb.svg"
+import Google from '../public/SVG/Google.svg'
+import Fb from "../public/SVG/Fb.svg"
 
 export default function Daftar() {
   return (
@@ -30,7 +30,7 @@ export default function Daftar() {
                     <input type="text" placeholder="Email/Username" className="border border-3 rounded-lg p-3 w-[480px]"/>
                 </div>
                 <div className="py-2">
-                    <input type="text" placeholder="Password" className="border border-3 rounded-lg p-3 w-[480px]"/>
+                    <input type="text" placeholder="Nama Lengkap" className="border border-3 rounded-lg p-3 w-[480px]"/>
                 </div>
                 <div className="py-2">
                     <input type="text" placeholder="Nama Pengguna" className="border border-3 rounded-lg p-3 w-[480px]"/>
@@ -38,7 +38,7 @@ export default function Daftar() {
                 <div className="py-2">
                     <input type="text" placeholder="Kata Sandi" className="border border-3 rounded-lg p-3 w-[480px]"/>
                 </div>
-                <button className="bg-red-600 p-2 rounded-lg text-white font-bold mt-5 w-[480px]">Login</button>
+                <Link href='/login'><button className="bg-red-600 p-2 rounded-lg text-white font-bold mt-5 w-[480px]">Sign Up</button></Link>
             </form>
             <p className="text-center mt-8">Sudah Punya Akun? <span className="font-bold text-red-600"><Link href="/login">Log In</Link></span></p>
         </div>

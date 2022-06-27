@@ -3,7 +3,7 @@ import Product from '../components/Product'
 import { Fragment, useEffect } from 'react'
 import data from '../public/data'
 
-export default function Home(props) {
+export default function Home() {
   useEffect(() => {
     console.log(data)
   }, [])
@@ -11,7 +11,7 @@ export default function Home(props) {
   return (
     <Fragment>
       <Layout>
-        <Product />
+        <Product/>
       </Layout>
     </Fragment>
   )
