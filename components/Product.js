@@ -12,7 +12,7 @@ export default function Product(){
                     <p>{item.name}</p>
                 </div>
                 <div>
-                    <p className='text-sm text-grey-600'>{item.price}</p>
+                    <p className='text-sm text-gray-400'>Rp.{item.price},-</p>
                 </div>
             </div>
         )
