@@ -1,10 +1,10 @@
 import React, { Fragment } from 'react'
 import Header from '../components/Header'
 
-export default function Layout ({children}){
+export default function Layout ({children,title}){
     return(
         <Fragment>
-            <Header/>
+            <Header title={title}/>
             <div>
                 {children}
             </div>

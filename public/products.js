@@ -1,27 +1,27 @@
 const data = [
     {
-        "id" : 10,
+        "id" : 1,
         "name" : "Mi TV 4",
         "price": 15000000,
         "image": "/UAS-Assets/Elektronik/MITV.png",
         "description" : "43 Inch Smart TV",
-        "cat_id" : 1
+        "category_id" : 1
     },
     {
-        "id" : 11,
+        "id" : 2,
         "name" : "Poco X3 Pro",
         "price": 4500000,
         "image": "/UAS-Assets/Elektronik/Poco.jpg",
         "description" : "6 GB RAM/ 128 GB ROM", 
-        "cat_id" : 1
+        "category_id" : 1
     },
     {
-        "id" : 12,
+        "id" : 3,
         "name" : "Redmi Note 11",
         "price": 5000000,
         "image": "/UAS-Assets/Elektronik/Redmi.png",
         "description" : "64GB 4GB RAM",
-        "cat_id" : 1
+        "category_id" : 1
     },
     {
         "id" : 13,
@@ -29,7 +29,7 @@ const data = [
         "price": 19750000,
         "image": "/UAS-Assets/Elektronik/Smart.png",
         "description" : "UHD 4K",
-        "cat_id" : 1
+        "category_id" : 1
     },
     {
         "id" : 14,
@@ -37,7 +37,7 @@ const data = [
         "price": 7200000,
         "image": "/UAS-Assets/Elektronik/Samsung.png",
         "description" : "5G Flip Smartphone",
-        "cat_id" : 1
+        "category_id" : 1
     },
     {
         "id" : 15,
@@ -45,7 +45,7 @@ const data = [
         "price": 5700000,
         "image": "/UAS-Assets/Elektronik/Xiaomi-11t.jpg",
         "description" : "8 GB RAM 128 GB ROM",
-        "cat_id" : 1 
+        "category_id" : 1 
     },
     {
         "id" : 16,
@@ -53,7 +53,7 @@ const data = [
         "price": 6000000,
         "image": "/UAS-Assets/Elektronik/Xiaomi-12-Pro.png",
         "description" : "50 MP 128 GB ROM 8 GB RAM",
-        "cat_id" : 1 
+        "category_id" : 1 
     },
     {
         "id" : 20,
@@ -61,7 +61,7 @@ const data = [
         "price": 95000,
         "image": "/UAS-Assets/Fashion/Casual.jpg",
         "description" : "Kaos pria warna merah",
-        "cat_id" : 2 
+        "category_id" : 2 
     },
     {
         "id" : 21,
@@ -69,7 +69,7 @@ const data = [
         "price": 280000,
         "image": "/UAS-Assets/Fashion/Footwear.jpg",
         "description" : "Warna Putih",
-        "cat_id" : 2
+        "category_id" : 2
     },
     {
         "id" : 22,
@@ -77,7 +77,7 @@ const data = [
         "price": 250000,
         "image": "/UAS-Assets/Fashion/Klee.jpg",
         "description" : "Hoodie Game Genshin Impact",
-        "cat_id" : 2
+        "category_id" : 2
     },
     {
         "id" : 23,
@@ -85,7 +85,7 @@ const data = [
         "price": 120000,
         "image": "/UAS-Assets/Fashion/Cotton.jpg",
         "description" : "Kaos Pria Warna Biru",
-        "cat_id" : 2
+        "category_id" : 2
     },
     {
         "id" : 24,
@@ -93,7 +93,7 @@ const data = [
         "price": 80000,
         "image": "/UAS-Assets/Fashion/Tee.jpg",
         "description" : "Kaos Pira Warna Hitam",
-        "cat_id" : 2
+        "category_id" : 2
     },
     {
         "id" : 25,
@@ -101,7 +101,7 @@ const data = [
         "price": 80000,
         "image": "/UAS-Assets/Fashion/Premium.jpg",
         "description" : "Hijab bahan katun",
-        "cat_id" : 2
+        "category_id" : 2
     },
     {
         "id" : 30,
@@ -109,7 +109,7 @@ const data = [
         "price": 200000,
         "image": "/UAS-Assets/Alat/Spin.jpg",
         "description" : "Kain pel putar praktis",
-        "cat_id" : 3
+        "category_id" : 3
     },
     {
         "id" : 31,
@@ -117,7 +117,7 @@ const data = [
         "price": 120000,
         "image": "/UAS-Assets/Alat/Cendol.jpg",
         "description" : "Keset tebal halus bermacam warna",
-        "cat_id" : 3
+        "category_id" : 3
     },
     {
         "id" : 32,
@@ -125,7 +125,7 @@ const data = [
         "price": 270000,
         "image": "/UAS-Assets/Alat/Singa.png",
         "description" : "Alat dapur dari kayu pilihan",
-        "cat_id" : 3
+        "category_id" : 3
     },
     {
         "id" : 33,
@@ -133,7 +133,7 @@ const data = [
         "price": 120000,
         "image": "/UAS-Assets/Alat/Oxihom.jpg",
         "description" : "Sikat WC Silikon gantung",
-        "cat_id" : 3
+        "category_id" : 3
     },
     {
         "id" : 34,
@@ -141,7 +141,7 @@ const data = [
         "price": 350000,
         "image": "/UAS-Assets/Alat/Spray.jpg",
         "description" : "Alat Pel Otomatis",
-        "cat_id" : 3
+        "category_id" : 3
     }
 ]
 
