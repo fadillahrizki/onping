@@ -1,19 +1,22 @@
 import Image from 'next/image';
 import mikro from '../public/UAS-Assets/mikro.png'
 import { useState, useEffect, Fragment } from 'react';
-import data from '../public/data.js'
+import data from '../public/products'
+import Link from 'next/link';
 
 export default function Product(){
     let allProduct = data.map((item) => {
         return (
             <div className='block'>
-                <Image src={item.image} width={150} height={150}/>
-                <div>
-                    <p>{item.name}</p>
-                </div>
-                <div>
-                    <p className='text-sm text-grey-600'>{item.price}</p>
-                </div>
+                <Link href={'/products/'+item.id}>
+                    <Image src={item.image} width={150} height={150}/>
+                    <div>
+                        <p>{item.name}</p>
+                    </div>
+                    <div>
+                        <p className='text-sm text-grey-600'>{item.price}</p>
+                    </div>
+                </Link>
             </div>
         )
     })
