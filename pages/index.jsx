@@ -1,20 +1,31 @@
 import Layout from '../Layout/Layout'
-import Product from '../components/Product.jsx'
-import { Fragment, useEffect} from 'react'
+import { Fragment } from 'react'
 import Categories from '../public/categories'
 import Image from 'next/image'
-import mikro from '../public/UAS-Assets/mikro.png'
 import ListProduct from '../components/ListProduct'
-
+import 'react-slideshow-image/dist/styles.css';
+import { Slide } from 'react-slideshow-image';
 
 export default function Home() {
-  const allCat = Categories.map(category=><ListProduct  key={category.id} category={category}/>)
+  const allCat = Categories.map(category=><ListProduct  key={category.id} item={category}/>)
+  const slides = [
+    {
+      image : '/../public/UAS-Assets/mikro.png'
+    },
+    {
+      image : '/../public/banner.jpg'
+    }
+  ]
   return (
     <Fragment>
       <Layout title={'Home'}>
-        <div className='banner mt-20 mx-80'>
-            <Image src={mikro}  width={1500} height={500} />
-        </div>
+        <Slide>
+          {slides.map((slideImage, index) => (
+            <div className='each-slide mt-20 mx-96' key={index}>
+              <Image src={slideImage.image} width={800} height={400} />
+            </div>
+          ))}
+        </Slide>
         {allCat}
       </Layout>
     </Fragment>

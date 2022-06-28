@@ -6,9 +6,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useSelector } from 'react-redux';
 
-export default function Header({title, product}){
+export default function Header({title}){
     const [isHovering, setHovering] = useState(false);
-    const [isShowing, setShowing] = useState(false);
 
     const cart = useSelector((state) => state.cart);
 
@@ -63,7 +62,7 @@ export default function Header({title, product}){
                                 <p>User</p>
                                 {/* Log Out */}
                                 {isHovering? 
-                                <div className='absolute ml-[-30px] mt-10 bg-white p-5 px-10 text-red-600 font-semibold drop-shadow-lg rounded-2xl border-2 border-red-600'>
+                                <div className='absolute ml-[-30px] bg-white p-5 px-10 text-red-600 font-semibold drop-shadow-lg rounded-2xl border-2 border-red-600'>
                                     <Link href='/login'>Log Out</Link>
                                 </div> : ''}   
 
