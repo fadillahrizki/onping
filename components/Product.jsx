@@ -1,7 +1,6 @@
 import Image from 'next/image';
-import mikro from '../public/UAS-Assets/mikro.png'
-import { useState, useEffect, Fragment } from 'react';
 import Link from 'next/link';
+import Slider from 'react-slick'
 
 export default function Product({data}){
     return (
