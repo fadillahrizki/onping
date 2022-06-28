@@ -5,7 +5,6 @@ import Categories from '../public/categories'
 import Image from 'next/image'
 import mikro from '../public/UAS-Assets/mikro.png'
 import ListProduct from '../components/ListProduct'
-import Head from 'next/head'
 
 
 export default function Home() {
