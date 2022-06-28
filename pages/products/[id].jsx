@@ -6,22 +6,18 @@ import { IoPencilSharp } from "react-icons/io5"
 import { FiPlusSquare, FiMinusSquare } from 'react-icons/fi'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useDispatch } from 'react-redux';
+import { addToCart } from '../../redux/cart.slice';
 
 export default function Detail() {
     const router = useRouter()
     const [product,setProduct] = useState(null)
-    const [carts,setCarts] = useState(null)
     const { id } = router.query
+    const dispatch = useDispatch();
     
     useEffect(()=>{
         setProduct(products.find(p=>p.id==id))
     },[id])
-
-    function getCarts(){
-    }
-    
-    function handleCart(){
-    }
 
     return (
         product ? 
@@ -40,7 +36,7 @@ export default function Detail() {
                             <div className='col-span-3'>
                                 <Image src={product.image} width={500} height={500}/>
                             </div>
-                            <div className='col-span-6'>
+                            <div className='col-span-5'>
                                 <h2 className='text-xl'>{product.name}</h2>
                                 <h1 className='text-2xl font-bold my-3'>Rp. {product.price.toLocaleString('en-US')},-</h1>
                                 <div className='mt-10'>
@@ -48,7 +44,7 @@ export default function Detail() {
                                     <p className='text-sm'>{product.description}</p>
                                 </div>
                             </div>
-                            <div className="col-span-3">
+                            <div className="col-span-4">
                                 <div className='bg-red-600 text-center p-3 rounded-lg'>
                                     <p className='text-white font-semibold'>Produk Terpopuler</p>
                                 </div>
@@ -70,7 +66,9 @@ export default function Detail() {
                                             <h1 className='text-lg font-bold ml-6'>Rp. {product.price.toLocaleString('en-US')},-</h1>
                                         </div>
                                         <div className='grid gap-2 m-auto font-bold my-5'>
-                                            <button className='text-white bg-red-600 p-3 rounded-xl' onClick={handleCart}>+ Masuk Troli</button>
+                                            <button className='text-white bg-red-600 p-3 rounded-xl' onClick={() => 
+                                            dispatch(addToCart(product))}>
+                                                + Masuk Troli</button>
                                             <button className='border border-red-600 p-3 rounded-xl text-red-600'>Langsung Beli</button>
                                         </div>
                                     </div>

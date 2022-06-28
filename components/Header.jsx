@@ -3,19 +3,11 @@ import { FaShoppingCart, FaBell, FaHistory, FaEnvelope, FaUserCircle, FaArrowAlt
 import {GoSearch} from 'react-icons/go'
 import Head from 'next/head'
 import Link from 'next/link';
+import Image from 'next/image';
 
-export default function Header({title}){
+export default function Header({title, product}){
     const [isHovering, setHovering] = useState(false);
     const [isShowing, setShowing] = useState(false);
-
-
-    const shows = () =>{
-        setShowing(true)
-    };
-
-    const show = () => {
-        setShowing(false)
-    };
 
     const handleMouseOver = () =>{
         setHovering(true)
@@ -52,16 +44,7 @@ export default function Header({title}){
                             <span className='absolute ml-[-40px] mt-3 text-slate-500'>< GoSearch size={25} /></span>
                         </form>
                         <div className='flex mt-6 gap-[70px] ml-10'>
-                            <span onMouseOver={shows} onMouseOut={show}>
-                                <FaShoppingCart size={30} />
-                            </span>
-                            {/* Shopping cart */}
-                            {isShowing? 
-                            <div className='absolute mt-12 bg-white p-5 grid drop-shadow-lg ml-[-270px] text-left text-red-600 w-[500px] rounded-2xl'>
-                                <p className='border-b py-2'>Isi Keranjang</p>
-                                <p className='py-2 '>sdafdsafffffffffffffffffffffffffffffffff</p>
-                            </div> : ''}
-                                
+                            <Link href="/cart"><span className='cursor-pointer'><FaShoppingCart size={30} /></span></Link>  
                             <FaBell size={30} />
                             <Link href='/history'><span className='cursor-pointer'><FaHistory size={30} /></span></Link>
                             <FaEnvelope size={30} />

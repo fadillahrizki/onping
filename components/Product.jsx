@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import Slider from 'react-slick'
 
 export default function Product({data}){
     return (
