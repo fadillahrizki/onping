@@ -1,6 +1,6 @@
 import Layout from '../Layout/Layout'
 import Product from '../components/Product.jsx'
-import { Fragment} from 'react'
+import { Fragment, useEffect} from 'react'
 import Categories from '../public/categories'
 import Image from 'next/image'
 import mikro from '../public/UAS-Assets/mikro.png'

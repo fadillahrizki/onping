@@ -6,18 +6,34 @@ import { IoPencilSharp } from "react-icons/io5"
 import { FiPlusSquare, FiMinusSquare } from 'react-icons/fi'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { addToCart } from '../../redux/cart.slice';
+import { FaMinus, FaPlus } from 'react-icons/fa'
 
 export default function Detail() {
     const router = useRouter()
+    const cart = useSelector((state) => state.cart);
     const [product,setProduct] = useState(null)
+    const [quantity,setQuantity] = useState(1)
     const { id } = router.query
     const dispatch = useDispatch();
+    const isInCart  = cart.find((item) => item.id == id)
     
     useEffect(()=>{
         setProduct(products.find(p=>p.id==id))
     },[id])
+
+    function handleCart(){
+
+        let conf = confirm("Apakah Anda Yakin ?")
+
+        if(conf){
+
+            if(dispatch(addToCart({...product,new_quantity:quantity}))){
+                alert("Produk Berhasil Masuk ke dalam keranjang")
+            }
+        }
+    }
 
     return (
         product ? 
@@ -53,10 +69,11 @@ export default function Detail() {
                                     <Image src={product.image} width={100} height={100} />
                                     <div className = 'border-t-2 border-t-slate-400 '>
                                         <p className='text-sm my-2'>Jumlah Barang & Catatan</p>
-                                        <div className='grid grid-cols-2'>
-                                            < FiMinusSquare  size={30}/>
-                                            <span className='grid grid-cols-2'>< FiPlusSquare size={30}/><p>Stok 30</p></span>
-                                        </div> 
+                                        <div className="flex items-center justify-center gap-4 my-3">
+                                            <button className={"p-2 bg-red-600 text-white rounded-full disabled:bg-gray-200"} disabled={quantity==1} onClick={()=>setQuantity(quantity-=1)}><FaMinus size={20} /></button>
+                                            <h4 className="text-lg font-bold">{quantity}</h4>
+                                            <button className="p-2 bg-red-600 text-white rounded-full" onClick={()=>setQuantity(quantity+=1)}><FaPlus size={20} /></button>
+                                        </div>
                                         <div className='flex mt-5 gap-2'>
                                             < IoPencilSharp size={20}/>
                                             <p className='text-red-600 font-semibold'>Tambah Catatan</p>
@@ -66,9 +83,7 @@ export default function Detail() {
                                             <h1 className='text-lg font-bold ml-6'>Rp. {product.price.toLocaleString('en-US')},-</h1>
                                         </div>
                                         <div className='grid gap-2 m-auto font-bold my-5'>
-                                            <button className='text-white bg-red-600 p-3 rounded-xl' onClick={() => 
-                                            dispatch(addToCart(product))}>
-                                                + Masuk Troli</button>
+                                            <button className='text-white bg-red-600 p-3 rounded-xl' onClick={handleCart}>+ Masuk Troli</button>
                                             <button className='border border-red-600 p-3 rounded-xl text-red-600'>Langsung Beli</button>
                                         </div>
                                     </div>

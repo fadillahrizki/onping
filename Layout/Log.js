@@ -10,6 +10,7 @@ export default function Log( {children, type }){
         <Fragment>
             <Head>
                 <link href="https://fonts.googleapis.com/css2?family=Girassol&display=swap" rel="stylesheet" />
+                <title>{type}</title>
             </Head>
             <header className="w-full flex text-red-600">
                 <h1 className="font-Girassol text-[100px] ml-48">ON P!NG</h1>

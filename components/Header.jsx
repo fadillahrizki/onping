@@ -4,10 +4,13 @@ import {GoSearch} from 'react-icons/go'
 import Head from 'next/head'
 import Link from 'next/link';
 import Image from 'next/image';
+import { useSelector } from 'react-redux';
 
 export default function Header({title, product}){
     const [isHovering, setHovering] = useState(false);
     const [isShowing, setShowing] = useState(false);
+
+    const cart = useSelector((state) => state.cart);
 
     const handleMouseOver = () =>{
         setHovering(true)
@@ -44,7 +47,14 @@ export default function Header({title, product}){
                             <span className='absolute ml-[-40px] mt-3 text-slate-500'>< GoSearch size={25} /></span>
                         </form>
                         <div className='flex mt-6 gap-[70px] ml-10'>
-                            <Link href="/cart"><span className='cursor-pointer'><FaShoppingCart size={30} /></span></Link>  
+                            <Link href="/cart">
+                                <span className='cursor-pointer relative'>
+                                    <FaShoppingCart size={30} />
+                                    {
+                                        cart.length ? <span class="absolute -top-1 -right-2 bg-green-500 text-white font-semibold text-xs px-2 py-0.5 rounded-full">{cart.length}</span> : ''
+                                    }
+                                </span>
+                            </Link>  
                             <FaBell size={30} />
                             <Link href='/history'><span className='cursor-pointer'><FaHistory size={30} /></span></Link>
                             <FaEnvelope size={30} />
